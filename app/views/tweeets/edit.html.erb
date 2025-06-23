@@ -1,0 +1,12 @@
+<% content_for :title, "Editing tweeet" %>
+
+<h1>Editing tweeet</h1>
+
+<%= render "form", tweeet: @tweeet %>
+
+<br>
+
+<div>
+  <%= link_to "Show this tweeet", @tweeet %> |
+  <%= link_to "Back to tweeets", tweeets_path %>
+</div>
