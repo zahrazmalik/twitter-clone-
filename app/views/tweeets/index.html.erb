@@ -1,16 +1,10 @@
-<p style="color: green"><%= notice %></p>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <%= render 'trends'%>
+      <%= render 'feed'%>
+      <%= render 'who-to-follow'%>
+    </div>
+  </div>
+</section>
 
-<% content_for :title, "Tweeets" %>
-
-<h1>Tweeets</h1>
-
-<div id="tweeets">
-  <% @tweeets.each do |tweeet| %>
-    <%= render tweeet %>
-    <p>
-      <%= link_to "Show this tweeet", tweeet %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New tweeet", new_tweeet_path %>
