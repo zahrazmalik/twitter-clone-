@@ -1,0 +1,36 @@
+<div class="column is-one-quarter">
+  <div class="panel">
+    <p class="panel-heading">
+      Profile
+    </p>
+    <div class="panel-block">
+      <article class="media">
+        <figure class="media-left">
+          <p class="image is-64x64">
+            <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
+          </p>
+        </figure>
+        <div class="media-content">
+          <p class="title is-4 mb-0"><%= current_user.name %></p>
+          <p><small>@<%= current_user.username %></small></p>
+        </div>
+      </article>
+    </div>
+    <div class="panel-block">
+      <div class="level is-mobile">
+        <div class="level-item has-text-centered-text">
+          <div>
+            <p class="heading">Tweets</p>
+            <p class="title"><%= current_user.tweeets.count %></p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered-text">
+          <div>
+            <p class="heading">Followers</p>
+            <p class="title is-4">1051k</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
